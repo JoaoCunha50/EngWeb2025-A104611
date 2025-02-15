@@ -28,6 +28,11 @@ Este projeto foi desenvolvido no âmbito da UC de Engenharia Web e implementa um
    - [server.js](server.js)
 
 ## Utilização:
+ - Executar os comandos:
+   ```sh
+   json-server -w new_dataset.json
+   node server.js
+   ```
  - Abrir o browser e navegar até:
     ```sh
     localhost:1234
