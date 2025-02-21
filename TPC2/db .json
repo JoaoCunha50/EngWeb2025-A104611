@@ -2908,7 +2908,7 @@
       }
     },
     {
-      "id": "CS23",
+      "id": "CS1",
       "designacao": "Curso Supletivo de Clarinete",
       "duracao": "3",
       "instrumento": {
@@ -2926,7 +2926,7 @@
       }
     },
     {
-      "id": "CS24",
+      "id": "CS2",
       "designacao": "Curso Supletivo de Contrabaixo",
       "duracao": "3",
       "instrumento": {
@@ -2944,7 +2944,7 @@
       }
     },
     {
-      "id": "CS25",
+      "id": "CS3",
       "designacao": "Curso Supletivo de Corne Inglês",
       "duracao": "3",
       "instrumento": {
@@ -2962,7 +2962,7 @@
       }
     },
     {
-      "id": "CS26",
+      "id": "CS4",
       "designacao": "Curso Supletivo de Eufónio",
       "duracao": "3",
       "instrumento": {
@@ -2980,7 +2980,7 @@
       }
     },
     {
-      "id": "CS27",
+      "id": "CS5",
       "designacao": "Curso Supletivo de Fagote",
       "duracao": "3",
       "instrumento": {
@@ -2998,7 +2998,7 @@
       }
     },
     {
-      "id": "CS28",
+      "id": "CS6",
       "designacao": "Curso Supletivo de Flauta",
       "duracao": "3",
       "instrumento": {
@@ -3016,7 +3016,7 @@
       }
     },
     {
-      "id": "CS29",
+      "id": "CS7",
       "designacao": "Curso Supletivo de Fliscorne",
       "duracao": "3",
       "instrumento": {
@@ -3034,7 +3034,7 @@
       }
     },
     {
-      "id": "CS30",
+      "id": "CS8",
       "designacao": "Curso Supletivo de Guitarra",
       "duracao": "3",
       "instrumento": {
@@ -3052,7 +3052,7 @@
       }
     },
     {
-      "id": "CS31",
+      "id": "CS9",
       "designacao": "Curso Supletivo de Harpa",
       "duracao": "3",
       "instrumento": {
@@ -3070,7 +3070,7 @@
       }
     },
     {
-      "id": "CS32",
+      "id": "CS10",
       "designacao": "Curso Supletivo de Oboé",
       "duracao": "3",
       "instrumento": {
@@ -3088,7 +3088,7 @@
       }
     },
     {
-      "id": "CS33",
+      "id": "CS11",
       "designacao": "Curso Supletivo de Orgão",
       "duracao": "3",
       "instrumento": {
@@ -3106,7 +3106,7 @@
       }
     },
     {
-      "id": "CS34",
+      "id": "CS12",
       "designacao": "Curso Supletivo de Percussão",
       "duracao": "3",
       "instrumento": {
@@ -3124,7 +3124,7 @@
       }
     },
     {
-      "id": "CS35",
+      "id": "CS13",
       "designacao": "Curso Supletivo de Piano",
       "duracao": "3",
       "instrumento": {
@@ -3142,7 +3142,7 @@
       }
     },
     {
-      "id": "CS36",
+      "id": "CS14",
       "designacao": "Curso Supletivo de Saxofone",
       "duracao": "3",
       "instrumento": {
@@ -3160,7 +3160,7 @@
       }
     },
     {
-      "id": "CS37",
+      "id": "CS15",
       "designacao": "Curso Supletivo de Trombone",
       "duracao": "3",
       "instrumento": {
@@ -3178,7 +3178,7 @@
       }
     },
     {
-      "id": "CS38",
+      "id": "CS16",
       "designacao": "Curso Supletivo de Trompa",
       "duracao": "3",
       "instrumento": {
@@ -3196,7 +3196,7 @@
       }
     },
     {
-      "id": "CS39",
+      "id": "CS17",
       "designacao": "Curso Supletivo de Trompete",
       "duracao": "3",
       "instrumento": {
@@ -3214,7 +3214,7 @@
       }
     },
     {
-      "id": "CS40",
+      "id": "CS18",
       "designacao": "Curso Supletivo de Tuba",
       "duracao": "3",
       "instrumento": {
@@ -3232,7 +3232,7 @@
       }
     },
     {
-      "id": "CS41",
+      "id": "CS19",
       "designacao": "Curso Supletivo de Violoncelo",
       "duracao": "3",
       "instrumento": {
@@ -3250,7 +3250,7 @@
       }
     },
     {
-      "id": "CS42",
+      "id": "CS20",
       "designacao": "Curso Supletivo de Violino",
       "duracao": "3",
       "instrumento": {
@@ -3268,7 +3268,7 @@
       }
     },
     {
-      "id": "CS43",
+      "id": "CS21",
       "designacao": "Curso Supletivo de Viola de Arco",
       "duracao": "3",
       "instrumento": {
@@ -3286,7 +3286,7 @@
       }
     },
     {
-      "id": "CS44",
+      "id": "CS22",
       "designacao": "Curso Supletivo de Bandolim",
       "duracao": "3",
       "instrumento": {

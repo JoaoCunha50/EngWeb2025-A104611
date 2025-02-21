@@ -30,6 +30,7 @@ Este projeto foi desenvolvido no âmbito da UC de Engenharia Web e implementa um
 # Utilização:
  - Executar os comandos:
    ```sh
+   npm i
    json-server -w new_dataset.json
    node server.js
    ```

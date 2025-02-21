@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createServer } from 'http';
-import { getMainPage, getRepPage, getIntervPage, getMarcasPage } from './mypages.js';
+import { getMainPage, getAlunosPage, getAlunoPage, getCursosPage, getInstPage} from './mypages.js';
 import { readFile } from 'fs';
 
 const server = createServer(function (req, res) {
@@ -11,12 +11,12 @@ const server = createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
         res.write(getMainPage(d));
         res.end();
-    }else if(req.url == ("/reps")){
-        axios.get("http://localhost:3000/reparacoes")
+    }else if(req.url == ("/alunos")){
+        axios.get("http://localhost:3000/alunos")
             .then(resp => {
-                var reps = resp.data;
+                var alunos = resp.data;
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-                res.write(getRepPage(reps, null, d));
+                res.write(getAlunosPage(alunos, null, d));
                 res.end();
             })
             .catch(error => {
@@ -25,12 +25,13 @@ const server = createServer(function (req, res) {
                 res.write("<p>Erro: " + error + "</p>");
                 res.end();
             });
-    }else if(req.url == ("/interv")){
-        axios.get("http://localhost:3000/tipos_intervencao")
+    }else if(req.url.match(/alunos\/A\d+/)){
+        var id = req.url.split("/")[2];
+        axios.get(`http://localhost:3000/alunos/${id}`)
             .then(resp => {
-                var reps = resp.data;
+                var aluno = resp.data;
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-                res.write(getIntervPage(reps, d));
+                res.write(getAlunoPage(aluno, d));
                 res.end();
             })
             .catch(error => {
@@ -39,12 +40,12 @@ const server = createServer(function (req, res) {
                 res.write("<p>Erro: " + error + "</p>");
                 res.end();
             });
-    }else if(req.url == ("/marcas")){
-        axios.get("http://localhost:3000/marcas")
+    }else if(req.url == ("/cursos")){
+        axios.get("http://localhost:3000/cursos")
             .then(resp => {
-                var reps = resp.data;
+                var cursos = resp.data;
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-                res.write(getMarcasPage(reps, d));
+                res.write(getCursosPage(cursos, d));
                 res.end();
             })
             .catch(error => {
@@ -53,15 +54,37 @@ const server = createServer(function (req, res) {
                 res.write("<p>Erro: " + error + "</p>");
                 res.end();
             });
-    }else if(req.url.match(/\/marcas\/[a-zA-Z%0-9]+$/)){
-        var marca = req.url.split('/')[2]
-        marca = marca.replace('%20', ' ')
-        
-        axios.get(`http://localhost:3000/reparacoes?viatura.marca=${marca}`)
+        }else if(req.url.match(/cursos\/C[A-Z]\d+/)){
+            var id = req.url.split("/")[2];
+            axios.get(`http://localhost:3000/cursos/${id}`)
+                .then(resp => {
+                    var curso = resp.data;
+                    axios.get(`http://localhost:3000/alunos?curso=${curso.id}`)
+                    .then(resp => {
+                        var alunos = resp.data;
+                        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+                        res.write(getAlunosPage(alunos, curso, d));
+                        res.end();
+                    })
+                    .catch(error => {
+                        res.writeHead(500, {'Content-Type': 'text/html; charset=utf-8'});
+                        console.log(error);
+                        res.write("<p>Erro: " + error + "</p>");
+                        res.end();
+                    })
+                })
+                .catch(error => {
+                    res.writeHead(500, {'Content-Type': 'text/html; charset=utf-8'});
+                    console.log(error);
+                    res.write("<p>Erro: " + error + "</p>");
+                    res.end();
+                });
+    }else if(req.url == ("/inst")){
+        axios.get("http://localhost:3000/instrumentos")
             .then(resp => {
                 var reps = resp.data;
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-                res.write(getRepPage(reps, marca, d));
+                res.write(getInstPage(reps, d));
                 res.end();
             })
             .catch(error => {
@@ -70,6 +93,31 @@ const server = createServer(function (req, res) {
                 res.write("<p>Erro: " + error + "</p>");
                 res.end();
             });
+        }else if(req.url.match(/inst\/I\d+/)){
+            var id = req.url.split("/")[2];
+            axios.get(`http://localhost:3000/instrumentos/${id}`)
+                .then(resp => {
+                    var instrumento = resp.data;
+                    axios.get(`http://localhost:3000/alunos?instrumento=${instrumento['#text']}`)
+                    .then(resp => {
+                        var alunos = resp.data;
+                        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+                        res.write(getAlunosPage(alunos, instrumento, d));
+                        res.end();
+                    })
+                    .catch(error => {
+                        res.writeHead(500, {'Content-Type': 'text/html; charset=utf-8'});
+                        console.log(error);
+                        res.write("<p>Erro: " + error + "</p>");
+                        res.end();
+                    })
+                })
+                .catch(error => {
+                    res.writeHead(500, {'Content-Type': 'text/html; charset=utf-8'});
+                    console.log(error);
+                    res.write("<p>Erro: " + error + "</p>");
+                    res.end();
+                });
     }else if(req.url.match(/w3\.css$/)){
         readFile('w3.css', function(err, data) {
             res.writeHead(200, {'Content-Type': 'text/css; charset=utf-8'});
@@ -99,6 +147,6 @@ const server = createServer(function (req, res) {
     }
 });
 
-server.listen(3017);
+server.listen(7777);
 
-console.log("Listening to PORT - 3017");
+console.log("Listening to PORT - 7777");
