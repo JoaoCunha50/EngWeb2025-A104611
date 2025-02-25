@@ -1,4 +1,4 @@
-# TPC3 - Student Management System (25/02/2024)
+# TPC3 - Trabalho Prático 3 (25/02/2024)
 
 - **Nome:** João Manuel Machado da Cunha
 - **Nº:** A104611
