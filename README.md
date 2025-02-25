@@ -1,5 +1,6 @@
 ## Engenharia Web 2025
-Este repositório será utilizado para a realização de tarefas/TPC's no âmbito da UC de Engenharia Web, onde serão abordados e consolidados conceitos relacionados a essa área;
+
+Este repositório será utilizado para a realização de tarefas/TPC's no âmbito da UC de Engenharia Web, onde serão abordados e consolidados conceitos relacionados a essa área.
 
 - **Nome:** João Manuel Machado da Cunha
 - **Nº:** A104611
@@ -11,3 +12,4 @@ Este repositório será utilizado para a realização de tarefas/TPC's no âmbit
 
 - [TPC1](./TPC1)
 - [TPC2](./TPC2)
+- [TPC3](./TPC3)
