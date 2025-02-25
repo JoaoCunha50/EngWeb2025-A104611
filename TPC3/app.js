@@ -1,7 +1,3 @@
-// alunos_server.js
-// EW2024 : 04/03/2024
-// by jcr
-
 var http = require('http')
 var axios = require('axios')
 const { parse } = require('querystring');
