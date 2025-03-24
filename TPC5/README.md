@@ -12,26 +12,13 @@ Este projeto implementa uma aplicação web para gestão de tarefas utilizando u
  - **Express Framework**: Utilizado para criar o servidor web e gerir rotas
  - **MongoDB**: Base de dados NoSQL para armazenamento das tarefas
  - **Mongoose**: ODM (Object Data Modeling) para MongoDB
- - **Views em EJS**: Sistema de templates para geração dinâmica de páginas
+ - **Views em ExpressJS**: Sistema de templates para geração dinâmica de páginas
 
 ## Listagem de ficheiros
 
 #### **Lista de dependências/módulos**:
-- [package.json](package.json) - Configuração do projeto e dependências
-- [models/task.js](models/task.js) - Modelo Mongoose para as tarefas
-- [routes/tasks.js](routes/tasks.js) - Rotas para gestão de tarefas
-- [views/](views/) - Templates EJS para as páginas
-- [app.js](app.js) - Configuração principal do servidor Express
-- [config/db.js](config/db.js) - Configuração da conexão com MongoDB
-
-## Funcionalidades:
-- Listagem de todas as tarefas
-- Visualização detalhada de cada tarefa
-- Criação de novas tarefas
-- Edição de tarefas existentes
-- Remoção de tarefas
-- Filtragem por prioridade
-- Ordenação por data limite
+- [apiAlunos](apiAlunos) - API dados
+- [appAlunos](appAlunos) - Aplicação Alunos
 
 ## Utilização:
 1. Iniciar o MongoDB:
