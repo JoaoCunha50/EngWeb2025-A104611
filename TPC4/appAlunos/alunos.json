@@ -81,12 +81,13 @@
       "tpc8": true
     },
     {
-      "id": "A104540",
-      "name": "Pedro Miguel Araújo Gomes",
-      "gitlink": "https://github.com/FkGomesKr/EngWeb2025-A104540",
+      "id": "A104079",
+      "name": "Gonçalo",
+      "gitlink": "https://github.com/Gon58/EngWeb2025-A104079",
       "tpc1": true,
       "tpc2": true,
-      "tpc3": true
+      "tpc3": true,
+      "tpc4": true
     }
   ]
 }
