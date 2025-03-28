@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h1 Entidade: #{entidade}
+            h3 NIPC: #{nipc}
+        .w3-container
+            h3 Contratos:
+            table.w3-table-all
+                tr
+                    th ID Contrato
+                    th Objeto
+                    th Data Celebração
+                    th Preço
+                each c in contratos
+                    tr
+                        td
+                            a(href='/contratos/'+c.idcontrato)= c.idcontrato
+                        td= c.objectoContrato
+                        td= c.dataCelebracaoContrato
+                        td= c.precoContratual + "€"
+            .w3-container.w3-padding
+                h3 Valor Total dos Contratos: #{total.toFixed(2)}€
+                a.w3-button.w3-teal(href='/') Voltar
