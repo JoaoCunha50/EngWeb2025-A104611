@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h1 Book Details
+
+      .w3-container
+        .w3-row
+          .w3-col.m3
+            p Book ID:
+          .w3-col.m9
+            p= livro.bookId
+        .w3-row
+          .w3-col.m3
+            p Title:
+          .w3-col.m9
+            p= livro.title
+        .w3-row
+          .w3-col.m3
+            p Author:
+          .w3-col.m9
+            p= livro.author
+        .w3-row
+          .w3-col.m3
+            p Publish Date:
+          .w3-col.m9
+            p= livro.publishDate
+        .w3-row
+          .w3-col.m3
+            p Pages:
+          .w3-col.m9
+            p= livro.pages
+          .w3-col.m9
+            img(src=livro.coverImg)
+        
+      footer.w3-container.w3-teal
+        address
+          a(href="/") Back to books list

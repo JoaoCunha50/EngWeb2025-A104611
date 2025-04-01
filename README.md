@@ -16,3 +16,4 @@ Este repositório será utilizado para a realização de tarefas/TPC's no âmbit
 - [TPC4](./TPC4)
 - [TPC5](./TPC5)
 - [TPC6](./TPC6)
+- [ENGWEB2025-Afericao](./ENGWEB2025-Afericao)
